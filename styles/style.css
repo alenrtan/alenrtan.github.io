@@ -1,0 +1,180 @@
+/*variable names are --varName*/
+:root{
+    /*setting variables to colors so it's easier to deal with dark mode*/
+    /* --bgcolor: bisque; */
+    --buttonColor: rgb(65, 53, 53);
+    --navbarColor: rgb(65, 53, 53);
+    --navText: white;
+    --buttonTextColor: white;
+    --hrColor: rgba(16, 14, 11, .5);;
+}
+
+.dark{
+    transition-duration: .8s;
+
+    background: linear-gradient(to right, #39375e, #571669);
+    --buttonColor: ;
+    --buttonTextColor: ;
+    --navbarColor: #222023;
+    --navText: white;
+    --hrColor: white;
+    color: white;
+}
+
+a{
+    color: var(--hrColor) 
+}
+
+hr{
+    margin-top: 1.5em;
+    margin-right: 40%;
+    margin-left: 40%;
+    border-color:var(--hrColor);
+}
+
+body{
+    transition-duration: 1.2s;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', serif;
+    font-size: 16px;
+    background: linear-gradient(to right, bisque, rgb(248, 155, 41, 0.8));
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    position: fixed;
+    bottom: 0%;
+    background-color: var(--navbarColor);
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    color: var(--navText);
+    font-size: small;
+    display: flex;
+}
+
+.leftFoot{
+    margin-left: 5px;
+    text-align: left;
+    color: var(--navText);
+}
+
+.rightFoot{
+    margin-right: 5px;
+    text-align: right;
+    color: var(--navText);
+}
+
+.introduction{
+    text-align: center;
+    margin-left: 2in;
+    margin-right: 2in;
+    word-wrap: normal;
+}
+
+.topnav{
+    display: flex;
+    overflow:hidden;
+    background-color: var(--navbarColor);
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 30px;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+.topnav a{
+    transition-duration: .5s;
+    float: none;
+    color: var(--navText);
+    text-align: center;
+    padding-right: 45px; 
+    padding-bottom: 20px;
+    background-color:var(--navbarColor);
+    text-decoration: none; /* getting rid of the dang underline */
+}
+
+.topnav a:hover{
+    transition-duration: 1s;
+    font-size: x-large;
+    color:rgb(45, 218, 172);
+}
+
+
+.homepageHeader{
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 1cm;
+    margin-bottom: .5cm;
+}
+
+img{
+    margin-top: .5em;
+    width: 25%;
+    height: 25%;
+}
+
+.dark-mode-bttn{
+    background-color: var(--buttonColor);
+    color: var(--buttonTextColor);
+}
+
+.dark-mode-bttn:hover{
+    background-color: rgba(255,255,255, 0.4);
+}
+
+/*Small screens and such*/
+@media (max-width: 1023px){
+    .introduction{
+        text-align: center;
+        margin-left: .25in;
+        margin-right: .25in;
+        border: var(--boxBorderColor);
+        border-radius: 16px;        
+    }
+
+    .topnav{
+        display: none;
+    }
+
+    hr{
+        margin-top: 1.5em;
+        margin-right: 30%;
+        margin-left: 30%;
+        border-color:var(--navText);
+    }
+    
+    footer{
+        position: fixed;
+        bottom: 0%;
+        background-color: var(--navbarColor);
+        width: 100%;
+        text-align: left;
+        padding-bottom: 8px;
+        color: var(--navText);
+        font-size: x-small;
+    }
+}
+
+/*Larger screens - 1440+*/
+@media (min-width: 1440px){
+    .topnav{
+        display: flex;
+        overflow:hidden;
+        background-color: var(--navbarColor);
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        margin-left: 3.5in;
+        margin-right: 3.5in;
+        border-radius: 30px;
+        box-sizing: border-box;
+        height: 40px;
+    }
+}
