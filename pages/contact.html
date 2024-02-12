@@ -9,18 +9,29 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="../js/script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="topnav">
-            <div><a class="active" href="../index.html">About Me</a></div>
-            <div><a href="../pages/projects.html">Projects</a></div>
-            <div><a href="../pages/hobbies.html">Hobbies</a></div>
-            <div><a href="../pages/contact.html">Contact</a></div>
-            <button id="dark-light" class="dark-mode-bttn" type="button">Dark/Light</button>
+            <div><a class="active" href="../index.html">Home</a></div>
+            <div class="links"><a href="../pages/projects.html">Projects</a></div>
+            <div class="links"><a href="../pages/hobbies.html">Hobbies</a></div>
+            <div class="links"><a href="../pages/contact.html">Contact</a></div>
+            
+            <div><a class="burger"href="javascript:void(0);" class="icon" onclick="burgerMenu()">
+                <i class="fa fa-bars"></i></a>
+            </div>
+
+            <div><button id="dark-light" class="dark-mode-bttn" type="button"><i class="fa fa-moon-o"></i></button></div>
         </div>
     </header>
+
+    <footer>
+        <div class="leftFoot">Made by Alen Ray Tan - 2024</div>
+        <div class="rightFoot">alenraytan@gmail.com</div>
+    </footer>
 </body>
 </html>

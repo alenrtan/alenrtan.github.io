@@ -6,7 +6,9 @@
     --navbarColor: rgb(65, 53, 53);
     --navText: white;
     --buttonTextColor: white;
-    --hrColor: rgba(16, 14, 11, .5);;
+    --hrColor: rgba(16, 14, 11, .5);
+    --linkColor: rgb(83, 62, 131);
+    --shadow: drop-shadow(0 0 0.75rem rgb(63, 56, 58));
 }
 
 .dark{
@@ -18,11 +20,15 @@
     --navbarColor: #222023;
     --navText: white;
     --hrColor: white;
+    --linkColor: white;
+    --shadow: drop-shadow(0 0 0.75rem rgb(175, 147, 153));
     color: white;
 }
 
 a{
-    color: var(--hrColor) 
+    transition-delay: .1s;
+    transition-duration: .7s;
+    color: var(--linkColor);
 }
 
 hr{
@@ -105,7 +111,6 @@ footer{
     color:rgb(45, 218, 172);
 }
 
-
 .homepageHeader{
     justify-content: center;
     text-align: center;
@@ -115,9 +120,11 @@ footer{
 }
 
 img{
+    transition-duration: 1s;
     margin-top: .5em;
     width: 25%;
     height: 25%;
+    filter: var(--shadow);
 }
 
 .dark-mode-bttn{
@@ -129,25 +136,63 @@ img{
     background-color: rgba(255,255,255, 0.4);
 }
 
+.burger{
+    display: none;
+}
+
+
+/*------------- MEDIA QUERIES ----------------*/
 /*Small screens and such*/
 @media (max-width: 1023px){
+
     .introduction{
         text-align: center;
         margin-left: .25in;
-        margin-right: .25in;
-        border: var(--boxBorderColor);
-        border-radius: 16px;        
+        margin-right: .25in;    
     }
 
     .topnav{
+        display: flex;
+        overflow: hidden;
+        background-color: var(--navbarColor);
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0px;
+        height: 40px;
+        position: relative;
+    }
+
+    .topnav .links{
         display: none;
+    }
+
+    .dark-mode-bttn{
+        margin-left: 10px
+    }
+
+    .topnav a{
+        transition-duration: .5s;
+        float: none;
+        color: var(--navText);
+        text-align: center;
+        padding: 10px;
+        background-color:var(--navbarColor);
+        text-decoration: none; /* getting rid of the dang underline */
+        font-size: small;
+    }
+
+    .burger{
+        display:inline;
     }
 
     hr{
         margin-top: 1.5em;
         margin-right: 30%;
         margin-left: 30%;
-        border-color:var(--navText);
+        border-color:var(--hrColor);
     }
     
     footer{
@@ -160,6 +205,10 @@ img{
         color: var(--navText);
         font-size: x-small;
     }
+}
+
+@media (min-width: 1024px){
+    
 }
 
 /*Larger screens - 1440+*/
