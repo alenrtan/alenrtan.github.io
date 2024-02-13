@@ -18,3 +18,4 @@ As this is my first *real* project -- both for class and for myself -- I, of cou
 - https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
 - https://www.w3schools.com/jsref/prop_win_sessionstorage.asp
 - https://www.w3schools.com/howto/howto_js_mobile_navbar.asp (this was a HUGE help)
+- https://favicon.io/favicon-generator/
