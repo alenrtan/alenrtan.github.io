@@ -35,6 +35,7 @@ hr{
     margin-top: 1.5em;
     margin-right: 40%;
     margin-left: 40%;
+    margin-bottom: 1in;
     border-color:var(--hrColor);
 }
 
@@ -73,11 +74,12 @@ footer{
     color: var(--navText);
 }
 
-.introduction{
+.main-text{
     text-align: center;
     margin-left: 2in;
     margin-right: 2in;
     word-wrap: normal;
+    font-size: 18px;
 }
 
 .topnav{
@@ -111,10 +113,20 @@ footer{
     color:rgb(45, 218, 172);
 }
 
-.homepageHeader{
+h3{
     justify-content: center;
     text-align: center;
     font-size: 24px;
+    font-weight: 400;
+    margin-top: 1cm;
+    margin-bottom: .5cm;
+}
+
+h4{
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
     margin-top: 1cm;
     margin-bottom: .5cm;
 }
@@ -140,15 +152,27 @@ img{
     display: none;
 }
 
+.project-list{
+    text-align: left;
+    text-wrap: normal;
+}
+
+li img{
+    width:50%;
+    margin-left: 25%;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+}
 
 /*------------- MEDIA QUERIES ----------------*/
 /*Small screens and such*/
 @media (max-width: 1023px){
 
-    .introduction{
+    .main-text{
         text-align: center;
         margin-left: .25in;
         margin-right: .25in;    
+        font-size: medium;
     }
 
     .topnav{
@@ -192,7 +216,8 @@ img{
         margin-top: 1.5em;
         margin-right: 30%;
         margin-left: 30%;
-        border-color:var(--hrColor);
+        margin-bottom: 10%;
+        border-color: var(--hrColor);
     }
     
     footer{
@@ -204,6 +229,12 @@ img{
         padding-bottom: 8px;
         color: var(--navText);
         font-size: x-small;
+    }
+
+    .project-list{
+        text-align: left;
+        text-wrap: normal;
+        font-size: medium;
     }
 }
 
