@@ -137,6 +137,8 @@ img{
     width: 25%;
     height: 25%;
     filter: var(--shadow);
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .dark-mode-bttn{
@@ -164,10 +166,30 @@ li img{
     margin-bottom: 1cm;
 }
 
+.row{
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+
+.column{
+    flex:33.33%;
+    padding: 15px;
+}
+
+.photos{
+    display:inline; 
+}
+
+
 /*------------- MEDIA QUERIES ----------------*/
 /*Small screens and such*/
 @media (max-width: 1023px){
 
+    img{
+        max-width: 50%;
+    }
+    
     .main-text{
         text-align: center;
         margin-left: .25in;
@@ -202,10 +224,10 @@ li img{
         float: none;
         color: var(--navText);
         text-align: center;
-        padding: 10px;
+        padding: 8px;
         background-color:var(--navbarColor);
         text-decoration: none; /* getting rid of the dang underline */
-        font-size: small;
+        font-size: x-small;
     }
 
     .burger{
