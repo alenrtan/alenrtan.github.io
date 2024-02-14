@@ -19,3 +19,11 @@ As this is my first *real* project -- both for class and for myself -- I, of cou
 - https://www.w3schools.com/jsref/prop_win_sessionstorage.asp
 - https://www.w3schools.com/howto/howto_js_mobile_navbar.asp (this was a HUGE help)
 - https://favicon.io/favicon-generator/
+    This favicon was generated using the following font:
+
+    - Font Title: Ruwudu
+    - Font Author: Copyright (c) SIL International, 2015-2023
+    - Font Source: http://fonts.gstatic.com/s/ruwudu/v4/syky-y1tj6UzRKfNlQCT9tPdpw.ttf
+    - Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
+
+- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_images_side_by_side
