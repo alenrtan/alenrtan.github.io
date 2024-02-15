@@ -27,3 +27,4 @@ As this is my first *real* project -- both for class and for myself -- I, of cou
     - Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
 
 - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_images_side_by_side
+- 
