@@ -193,6 +193,32 @@ li img{
     display:inline; 
 }
 
+/* CONNECT 4*/
+#board{
+    display: grid;
+    grid-template-columns: repeat(7, 90px);
+    justify-content: center;
+    background-color: var(--navbarColor);
+    border-radius: 10px;
+    width: 720px;
+    height: 720px;
+    width: 700px; 
+    height: 700px; 
+    margin: 5% auto; 
+    gap: 5px
+}
+
+.cell{
+    background-color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px
+}
 
 /*------------- MEDIA QUERIES ----------------*/
 /*Small screens and such*/

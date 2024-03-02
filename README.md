@@ -21,11 +21,13 @@ As this is my first *real* project -- both for class and for myself -- I, of cou
 - https://www.w3schools.com/howto/howto_js_mobile_navbar.asp (this was a HUGE help)
 - https://favicon.io/favicon-generator/
     This favicon was generated using the following font:
-
     - Font Title: Ruwudu
     - Font Author: Copyright (c) SIL International, 2015-2023
     - Font Source: http://fonts.gstatic.com/s/ruwudu/v4/syky-y1tj6UzRKfNlQCT9tPdpw.ttf
     - Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
 
 - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_images_side_by_side
-- 
+- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
+
+###### Connect4 Resources
+- https://stackoverflow.com/questions/19625646/javascript-adding-an-id-attribute-to-another-created-element

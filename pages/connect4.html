@@ -16,17 +16,18 @@
     <link rel="manifest" href="/site.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="../js/script.js" defer></script>
+    <script src="../js/connect4.js" defer></script>
 </head>
 <body>
     <header>
         <div class="topnav">
-            <div><a href="../index.html">Home</a></div>
+            <div><a class="active" href="../index.html">Home</a></div>
             <div class="links"><a href="../pages/projects.html">Projects</a></div>
             <div class="links"><a href="../pages/hobbies.html">Hobbies</a></div>
             <div class="links"><a href="../pages/games.html">Games</a></div>
             <div class="links"><a href="../pages/contact.html">Contact</a></div>
             <div class="links"><a href="../pages/connect4.html">Connect4</a></div>
-            
+
             <div><a class="burger"href="javascript:void(0);" class="icon" onclick="burgerMenu()">
                 <i class="fa fa-bars"></i></a>
             </div>
@@ -37,12 +38,15 @@
 
     <section id="content">
         <h3>
-            Contact
+            Connect4
         </h3>
         <div class="main-text">
-            If you need to contact me, the best way to reach me is through email. I can be 
-            reached through my NMSU Email, <a href="mailto:atan8@nmsu.edu">atan8@nmsu.edu</a>, 
-            or through my gmail, <a href="mailto:alenraytan@gmail.com">alenraytan@gmail.com</a>
+            A simple connect4 game. Two players, first to get 4 tokens in a row wins!
+        </div>
+    </section>
+
+    <section id="game-area">
+        <div id="board">
         </div>
     </section>
 
