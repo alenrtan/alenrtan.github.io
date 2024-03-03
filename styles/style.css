@@ -201,11 +201,9 @@ li img{
     background-color: var(--navbarColor);
     border-radius: 10px;
     width: 720px;
-    height: 720px;
-    width: 700px; 
-    height: 700px; 
-    margin: 5% auto; 
-    gap: 5px
+    height: 700px;
+    margin: auto; 
+    gap: 5px;
 }
 
 .cell{
@@ -217,9 +215,47 @@ li img{
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
-    margin-top: 30px
+    margin-top: 30px ;
+    margin-left: 5px;
 }
 
+.blueCell{
+    background-color: rgba(0, 102, 255, 0.815);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px ;
+    margin-left: 5px;
+    animation: tokenDrop .75s;
+}
+
+.yellowCell{
+    transition-duration: 1s;
+    background-color: rgba(255, 187, 0, 0.877);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px ;
+    margin-left: 5px;
+    animation: tokenDrop .75s;
+}
+
+.col:hover{
+    background-color: gray;
+}
+
+@keyframes tokenDrop{
+    0% {background-color: black;}
+    50% {background-color: darkgrey;}
+}
 /*------------- MEDIA QUERIES ----------------*/
 /*Small screens and such*/
 @media (max-width: 1023px){
