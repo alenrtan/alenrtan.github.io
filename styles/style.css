@@ -194,6 +194,11 @@ li img{
 }
 
 /* CONNECT 4*/
+#game-text{
+    font-size: x-large;
+    margin: 10px auto;
+}
+
 #board{
     display: grid;
     grid-template-columns: repeat(7, 90px);
@@ -202,7 +207,9 @@ li img{
     border-radius: 10px;
     width: 720px;
     height: 700px;
-    margin: auto; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1in;
     gap: 5px;
 }
 
@@ -246,6 +253,10 @@ li img{
     margin-top: 30px ;
     margin-left: 5px;
     animation: tokenDrop .75s;
+}
+
+#restart{
+    visibility: hidden;
 }
 
 .col:hover{

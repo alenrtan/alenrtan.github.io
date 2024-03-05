@@ -1,5 +1,7 @@
 const boardRows = 6;
 const boardCols = 7;
+const gameTextArea = document.getElementById("game-text");
+let globalPoints = 0;
 let moveCount = 0;
 let player = 1; 
 let gameArray = [
@@ -45,6 +47,12 @@ function cellClicked(row, col){
     const cell = document.getElementById(rowPlacement + ", " + col);
     console.log("ROW PLACEMENT:" + rowPlacement);
 
+    if (rowPlacement == undefined){
+        moveCount--;
+        console.log("Adjusted Move #: " + moveCount);
+        return;
+    }
+
     if (player == 1){
         cell.classList.add("blueCell");
         gameArray[rowPlacement][col] = 1;
@@ -81,9 +89,13 @@ function checkColumn(row, col){
 
 function checkWinner(row, col){
     checkVertical(row, col);
-    checkLeftHorizontal(row, col);
-    checkRightHorizontal(row, col);
+    checkHorizontal(row, col);
     checkDiagonal(row, col);
+    
+    //check for tie
+    if (moveCount == 42){
+        gameTextArea.innerHTML = "Tie!";
+    }
 } // end checkWinner
 
 function checkVertical(row, col){
@@ -99,7 +111,8 @@ function checkVertical(row, col){
 
             if (pointCounter == 4){
                 console.log("Player 1 Wins via vertical!");
-                return;
+                gameTextArea.innerHTML = "Blue Wins!";
+                endGame();
             }
             if (row < boardRows - 1){
                 row++;
@@ -116,7 +129,8 @@ function checkVertical(row, col){
 
             if (pointCounter == 4){
                 console.log("Player 2 Wins via vertical!");
-                return;
+                gameTextArea.innerHTML = "Yellow Wins!";
+                endGame()
             }
 
             if (row < boardRows - 1){
@@ -129,92 +143,180 @@ function checkVertical(row, col){
     }
 } // end checkVertical
 
-function checkLeftHorizontal(row, col){
-    let pointCounter;
-    console.log(row + "--" + col);
 
-    if(player == 1){
-        // left-horizontal check
-        pointCounter = 0;
-        while(gameArray[row][col] == 1){
-            pointCounter++;
-            console.log("P1 Points are: " + pointCounter + " | Row is: " + row + " | Col is: " + col);
 
-            if (pointCounter == 4){
-                console.log("Player 1 Wins via right horizontal!");
-                return;
-            }
-            if (col > 0 && col < boardCols - 1){
-                col--;
-            }else{
-                return;
-            }
+function checkHorizontal(row, col){
+    let columnHolder = col;
+
+
+    if (player == 1){
+        globalPoints = 0;
+
+        //check left side
+        while(gameArray[row][col] == 1 && globalPoints != 4 && col >= 0){
+            globalPoints++;
+            col--;
         }
+
+        col = columnHolder + 1;
+        //check right side
+        while(gameArray[row][col] == 1 && globalPoints != 4 && col < boardCols){
+            globalPoints++;
+            col++;
+        }
+
+        if (globalPoints == 4){
+            gameTextArea.innerHTML = "Blue Wins!";
+            globalPoints = 0;
+            endGame()
+        }
+    
     }else{
-        // left-horizontal check
-        pointCounter = 0;
-        while(gameArray[row][col] == 2){
-            pointCounter++;
-            console.log("P1 Points are: " + pointCounter + " | Row is: " + row + " | Col is: " + col);
+        globalPoints = 0;
 
-            if (pointCounter == 4){
-                console.log("Player 2 Wins via right horizontal!");
-                return;
-            }
-
-            if (col > 0 && col < boardCols - 1){
-                col--;
-            }else{
-                return;
-            }
+        //check left side
+        while(gameArray[row][col] == 2 && globalPoints != 4 && col >= 0){
+            globalPoints++;
+            col--;
         }
 
+        col = columnHolder + 1;
+        //check right side
+        while(gameArray[row][col] == 2 && globalPoints != 4 && col < boardCols){
+            globalPoints++;
+            col++;
+        }
+
+        if (globalPoints == 4){
+            gameTextArea.innerHTML = "Yellow Wins!";
+            globalPoints = 0;
+            endGame()
+        }
     }
-} // end checkLeftHorizontal
-
-function checkRightHorizontal(row, col){
-    let pointCounter;
-    console.log(row + "--" + col);
-
-    if(player == 1){
-        // right-horizontal check
-        pointCounter = 0;
-        while(gameArray[row][col] == 1){
-            pointCounter++;
-            console.log("P1 Points are: " + pointCounter + " | Row is: " + row + " | Col is: " + col);
-
-            if (pointCounter == 4){
-                console.log("Player 1 Wins via left horizontal!");
-                return;
-            }
-            if (col < boardCols - 1){
-                col++;
-            }else{
-                return;
-            }
-        }
-    }else{
-        // right-horizontal check
-        pointCounter = 0;
-        while(gameArray[row][col] == 2){
-            pointCounter++;
-            console.log("P1 Points are: " + pointCounter + " | Row is: " + row + " | Col is: " + col);
-
-            if (pointCounter == 4){
-                console.log("Player 2 Wins via left horizontal!");
-                return;
-            }
-
-            if (col < boardCols - 1){
-                col++;
-            }else{
-                return;
-            }
-        }
-
-    }
-} // end checkRightHorizontal
+    console.log("current global points: " + globalPoints);
+} // end checkHorizontal
 
 function checkDiagonal(row, col){
+    let rowHolder = row;
+    let colHolder = col;
 
+    if (player == 1){
+        globalPoints = 0;
+        
+        // check upper left
+        // NOTE: this will ALWAYS account +1 for the current point.
+        //       that's why there's the rowHolder and colHolder offsets below
+        while (col >= 0 && row >= 0 && globalPoints != 4 && gameArray[row][col] == 1){
+            globalPoints++;
+            row--;
+            col--;
+        }
+
+        // check upper right - the offsets metioned above 
+        row = rowHolder - 1;
+        col = colHolder + 1;
+
+        while (col < boardCols - 1 && row >= 0 && globalPoints != 4 && gameArray[row][col] == 1 ){
+            globalPoints++;
+            row--;
+            col++;
+        }
+
+        // check lower left
+        row = rowHolder + 1;
+        col = colHolder - 1;
+
+        while (col > 0 && row < boardRows && globalPoints != 4 && gameArray[row][col] == 1){
+            globalPoints++;
+            row++;
+            col--;
+            console.log("Row and Col " + row + ", " + col);
+            console.log("current points gbl: " + globalPoints);
+        }
+
+        // check lower right
+
+        row = rowHolder + 1;
+        col = colHolder + 1;
+
+        while(col < boardCols && row < boardRows && globalPoints != 4 && gameArray[row][col] == 1){
+            globalPoints++;
+            row++;
+            col++;
+        }
+
+        if (globalPoints == 4){
+            gameTextArea.innerHTML = "Blue Wins";
+            globalPoints = 0;
+            endGame()
+        }
+        console.log("CURRENT GLOBAL PTS == " + globalPoints);
+    }else{
+        globalPoints = 0;
+        
+        // check upper left
+        // NOTE: this will ALWAYS account +1 for the current point.
+        //       that's why there's the rowHolder and colHolder offsets below
+        while (col >= 0 && row >= 0 && globalPoints != 4 && gameArray[row][col] == 2){
+            globalPoints++;
+            row--;
+            col--;
+        }
+
+        // check upper right - the offsets metioned above 
+        row = rowHolder - 1;
+        col = colHolder + 1;
+
+        while (col < boardCols - 1 && row >= 0 && globalPoints != 4 && gameArray[row][col] == 2 ){
+            globalPoints++;
+            row--;
+            col++;
+        }
+
+        // check lower left
+        row = rowHolder + 1;
+        col = colHolder - 1;
+
+        while (col > 0 && row < boardRows && globalPoints != 4 && gameArray[row][col] == 2){
+            globalPoints++;
+            row++;
+            col--;
+            console.log("Row and Col " + row + ", " + col);
+            console.log("current points gbl: " + globalPoints);
+        }
+
+        // check lower right
+
+        row = rowHolder + 1;
+        col = colHolder + 1;
+        
+        while(col < boardCols && row < boardRows && globalPoints != 4 && gameArray[row][col] == 2){
+            globalPoints++;
+            row++;
+            col++;
+        }
+
+        if (globalPoints == 4){
+            gameTextArea.innerHTML = "Yellow Wins";
+            globalPoints = 0;
+            endGame()
+        }
+        console.log("CURRENT GLOBAL PTS == " + globalPoints);
+    }
 } // end checkDiagonal
+
+function restartGame(){
+    gameArray = [
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0]
+    ];
+    location.reload();
+} // end restartGame()
+
+function endGame(){
+    document.getElementById("restart").style.visibility = "visible";
+}
