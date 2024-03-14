@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Website for Alen Ray Tan">
+    <title>Alen Ray Tan</title>
+    
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/icons//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/icons//favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="../js/script.js" defer></script>
+    <script src="../js/connect4.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <div><a class="active" href="../index.html">Home</a></div>
+            <div class="links"><a href="../pages/projects.html">Projects</a></div>
+            <div class="links"><a href="../pages/hobbies.html">Hobbies</a></div>
+            <div class="links"><a href="../pages/games.html">Games</a></div>
+            <div class="links"><a href="../pages/contact.html">Contact</a></div>
+            <div class="links"><a href="../pages/connect4.html">Connect4</a></div>
+
+            <div><a class="burger"href="javascript:void(0);" class="icon" onclick="burgerMenu()">
+                <i class="fa fa-bars"></i></a>
+            </div>
+
+            <div id="dark-light" class="dark-mode-bttn"><i class="fa fa-moon-o"></i></div>
+        </div>
+    </header>
+
+    <section id="content">
+        <h3>
+            Connect4
+        </h3>
+        <div class="main-text">
+            A simple connect4 game. Two players, first to get 4 tokens in a row wins!
+            <br><br>
+            <div id="game-text">
+                Player 1 - Blue | Player 2 - Yellow
+            </div>
+
+            <div id="restart-area">
+                <button id="restart" type="button" onclick="restartGame()">Reset Board</button>
+                <br><br>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="game-area">
+        <div id="board">
+        </div>
+    </section>
+
+    <footer>
+        <div class="leftFoot">Made by Alen Ray Tan - 2024</div>
+        <div class="rightFoot">alenraytan@gmail.com</div>
+    </footer>
+</body>
+</html>
