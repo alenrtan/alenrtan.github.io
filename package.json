@@ -1,9 +1,0 @@
-{
-    "name": "connect4",
-    "version": "0.0.1",
-    "description": "allows multiplayer connect4",
-    "type": "commonjs",
-    "dependencies": {
-        "express": "^4.18.3"
-    }
-}
