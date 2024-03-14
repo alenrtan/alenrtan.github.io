@@ -32,4 +32,3 @@ As this is my first *real* project -- both for class and for myself -- I, of cou
 ###### Connect4 Resources
 - https://stackoverflow.com/questions/19625646/javascript-adding-an-id-attribute-to-another-created-element
 - https://w3schools.com/cssref/css3_pr_animation-keyframes.php
-- https://stackoverflow.com/questions/28083708/how-to-disable-clicking-inside-div

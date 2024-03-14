@@ -319,5 +319,4 @@ function restartGame(){
 
 function endGame(){
     document.getElementById("restart").style.visibility = "visible";
-    document.getElementById("board").style.pointerEvents = "none"; // stop any clicks on the board
 }

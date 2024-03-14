@@ -210,7 +210,6 @@ li img{
     margin-right: auto;
     margin-bottom: 1in;
     gap: 5px;
-    pointer-events: auto;
 }
 
 .cell{
