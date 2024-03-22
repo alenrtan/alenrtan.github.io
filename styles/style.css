@@ -1,0 +1,373 @@
+/*variable names are --varName*/
+:root{
+    /*setting variables to colors so it's easier to deal with dark mode*/
+    /* --bgcolor: bisque; */
+    --buttonColor: rgb(65, 53, 53);
+    --navbarColor: rgb(65, 53, 53);
+    --navText: white;
+    --buttonTextColor: white;
+    --hrColor: rgba(16, 14, 11, .5);
+    --linkColor: rgb(83, 62, 131);
+    --shadow: drop-shadow(0 0 0.75rem rgb(63, 56, 58));
+}
+
+iframe{
+    margin-top: 25px;
+}
+
+/* make dark mode look nice with a slight transition */
+.dark{
+    transition-duration: .8s;
+    background: linear-gradient(to right, #39375e, #571669);
+    --buttonColor: ;
+    --buttonTextColor: ;
+    --navbarColor: #222023;
+    --navText: white;
+    --hrColor: white;
+    --linkColor: white;
+    --shadow: drop-shadow(0 0 0.75rem rgb(175, 147, 153));
+    color: white;
+}
+
+a{
+    transition-delay: .1s;
+    transition-duration: .7s;
+    color: var(--linkColor);
+}
+
+hr{
+    margin-top: 1.5em;
+    margin-right: 40%;
+    margin-left: 40%;
+    margin-bottom: 1in;
+    border-color:var(--hrColor);
+}
+
+/* font change to poppins */
+body{
+    transition-duration: 1.2s;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', serif;
+    font-size: 16px;
+    background: linear-gradient(to right, bisque, rgb(248, 155, 41, 0.8));
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer - main */
+footer{
+    position: fixed;
+    bottom: 0%;
+    background-color: var(--navbarColor);
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    color: var(--navText);
+    font-size: small;
+    display: flex;
+}
+
+/* details for left and right sides of footer */
+.leftFoot{
+    margin-left: 5px;
+    text-align: left;
+    color: var(--navText);
+}
+
+.rightFoot{
+    margin-right: 5px;
+    text-align: right;
+    color: var(--navText);
+}
+
+/* for the main content of the page - text wise */
+.main-text{
+    text-align: center;
+    margin-left: 2in;
+    margin-right: 2in;
+    word-wrap: normal;
+    font-size: 18px;
+}
+
+/* navbar things */
+.topnav{
+    display: flex;
+    overflow:hidden;
+    background-color: var(--navbarColor);
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 30px;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+.topnav a{
+    transition-duration: .5s;
+    float: none;
+    color: var(--navText);
+    text-align: center;
+    padding-right: 45px; 
+    padding-bottom: 20px;
+    background-color:var(--navbarColor);
+    text-decoration: none; /* getting rid of the dang underline */
+}
+
+.topnav a:hover{
+    transition-duration: 1s;
+    font-size: x-large;
+    color:rgb(45, 218, 172);
+}
+
+/* header was a little to bold - changed for h3 and h4 */
+h3{
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 1cm;
+    margin-bottom: .5cm;
+}
+
+h4{
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 1cm;
+    margin-bottom: .5cm;
+}
+
+img{
+    transition-duration: 1s;
+    margin-top: .5em;
+    width: 25%;
+    height: 25%;
+    filter: var(--shadow);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* moon symbol for dark mode */
+.dark-mode-bttn{
+    background-color: var(--buttonColor);
+    color: var(--buttonTextColor);
+}
+
+.dark-mode-bttn:hover{
+    background-color: rgba(255,255,255, 0.4);
+}
+
+.burger{
+    display: none;
+}
+
+.list{
+    text-align: left;
+    text-wrap: normal;
+}
+
+li img{
+    width:50%;
+    margin-left: 25%;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+}
+
+/* rest of these are for aligning the pictures - essentially a flex box */
+.row{
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+
+.column{
+    flex:33.33%;
+    padding: 15px;
+}
+
+.photos{
+    display:inline; 
+}
+
+/* CONNECT 4*/
+#game-text{
+    font-size: x-large;
+    margin: 10px auto;
+}
+
+#board{
+    display: grid;
+    grid-template-columns: repeat(7, 90px);
+    justify-content: center;
+    background-color: var(--navbarColor);
+    border-radius: 10px;
+    width: 720px;
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1in;
+    gap: 5px;
+}
+
+.cell{
+    background-color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px ;
+    margin-left: 5px;
+}
+
+.blueCell{
+    background-color: rgba(0, 102, 255, 0.815);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px ;
+    margin-left: 5px;
+    animation: tokenDrop .75s;
+}
+
+.yellowCell{
+    transition-duration: 1s;
+    background-color: rgba(255, 187, 0, 0.877);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px ;
+    margin-left: 5px;
+    animation: tokenDrop .75s;
+}
+
+#restart{
+    visibility: hidden;
+}
+
+.col:hover{
+    background-color: gray;
+}
+
+@keyframes tokenDrop{
+    0% {background-color: black;}
+    50% {background-color: darkgrey;}
+}
+/*------------- MEDIA QUERIES ----------------*/
+/*Small screens and such*/
+@media (max-width: 1023px){
+
+    img{
+        max-width: 50%;
+    }
+    
+    .main-text{
+        text-align: center;
+        margin-left: .25in;
+        margin-right: .25in;    
+        font-size: medium;
+    }
+
+    .topnav{
+        display: flex;
+        overflow: hidden;
+        background-color: var(--navbarColor);
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0px;
+        height: 40px;
+        position: relative;
+    }
+
+    .topnav .links{
+        display: none;
+    }
+
+    .dark-mode-bttn{
+        margin-left: 10px
+    }
+
+    .topnav a{
+        transition-duration: .5s;
+        float: none;
+        color: var(--navText);
+        text-align: center;
+        padding: 8px;
+        background-color:var(--navbarColor);
+        text-decoration: none; /* getting rid of the dang underline */
+        font-size: x-small;
+    }
+
+    .topnav a:hover{
+        transition-duration: 1s;
+        font-size: large;
+        color:rgb(45, 218, 172);
+    }
+
+    .burger{
+        display:inline;
+    }
+
+    hr{
+        margin-top: 1.5em;
+        margin-right: 30%;
+        margin-left: 30%;
+        margin-bottom: 10%;
+        border-color: var(--hrColor);
+    }
+    
+    footer{
+        position: fixed;
+        bottom: 0%;
+        background-color: var(--navbarColor);
+        width: 100%;
+        text-align: left;
+        padding-bottom: 8px;
+        color: var(--navText);
+        font-size: x-small;
+    }
+
+    .list{
+        text-align: left;
+        text-wrap: normal;
+        font-size: medium;
+    }
+}
+
+@media (min-width: 1024px){
+    
+}
+
+/*Larger screens - 1440+*/
+@media (min-width: 1440px){
+    .topnav{
+        display: flex;
+        overflow:hidden;
+        background-color: var(--navbarColor);
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        margin-left: 3.5in;
+        margin-right: 3.5in;
+        border-radius: 30px;
+        box-sizing: border-box;
+        height: 40px;
+    }
+}
