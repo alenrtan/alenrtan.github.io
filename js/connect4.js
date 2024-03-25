@@ -319,4 +319,5 @@ function restartGame(){
 
 function endGame(){
     document.getElementById("restart").style.visibility = "visible";
+    document.getElementById("board").style.pointerEvents = "none";
 }
