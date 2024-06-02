@@ -1,12 +1,12 @@
 ##### Alen Ray's Personal Website
 ---------------------------------------
-alenrtan.github.io
-<br>
 If you've come across this, it's either you know me *or* you got a link from somewhere/someone! Anyways, welcome! Some things may be messy, but hey, I'm proud of this mess :)  
 <br>
-<br>
-###### Resources
-As this is my first *real* project -- both for class and for myself -- I, of course, had to look some things up! The following are some of the resources that I have used/taken inspiration from when developing this personal website. I will do my best to keep this as up-to-date as possible!
+<be>
+
+<details>
+<summary>Resources Used</summary>
+The following are some of the resources that I have used/taken inspiration from when developing this personal website. I will do my best to keep this as up-to-date as possible!
 
 - CS 382 Class - Modern Web Technologies
 - https://www.w3schools.com/howto/howto_js_topnav.asp
@@ -32,3 +32,4 @@ As this is my first *real* project -- both for class and for myself -- I, of cou
 ###### Connect4 Resources
 - https://stackoverflow.com/questions/19625646/javascript-adding-an-id-attribute-to-another-created-element
 - https://w3schools.com/cssref/css3_pr_animation-keyframes.php
+</details>
