@@ -1,6 +1,6 @@
 ##### Alen Ray's Personal Website
 ---------------------------------------
-If you've come across this, it's either you know me *or* you got a link from somewhere/someone! Anyways, welcome! Some things may be messy, but hey, I'm proud of this mess :)  
+A simple personal website. Contains information about me, some projects, hobbies, and others. Thanks for stopping by!
 <br>
 <be>
 
