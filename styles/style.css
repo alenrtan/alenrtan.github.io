@@ -84,8 +84,8 @@ footer{
 /* for the main content of the page - text wise */
 .main-text{
     text-align: center;
-    margin-left: 2in;
-    margin-right: 2in;
+    margin-left: 2.5in;
+    margin-right: 2.5in;
     word-wrap: normal;
     font-size: 18px;
 }
