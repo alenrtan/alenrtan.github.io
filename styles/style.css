@@ -113,7 +113,7 @@ footer{
     padding-right: 45px; 
     padding-bottom: 20px;
     background-color:var(--navbarColor);
-    text-decoration: none; /* getting rid of the dang underline */
+    text-decoration: none; 
 }
 
 .topnav a:hover{
@@ -149,6 +149,12 @@ img{
     filter: var(--shadow);
     max-width: 100%;
     max-height: 100%;
+}
+
+/* this might be redundant with .row and .col -- double check */
+.box{
+    display:flex;
+    justify-content: center;
 }
 
 /* moon symbol for dark mode */
@@ -189,9 +195,6 @@ li img{
     padding: 15px;
 }
 
-.photos{
-    display:inline; 
-}
 
 /* CONNECT 4*/
 #game-text{
@@ -268,6 +271,7 @@ li img{
     0% {background-color: black;}
     50% {background-color: darkgrey;}
 }
+
 /*------------- MEDIA QUERIES ----------------*/
 /*Small screens and such*/
 @media (max-width: 1023px){
